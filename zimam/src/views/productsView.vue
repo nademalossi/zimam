@@ -3,8 +3,6 @@ import Basebutton from '@/components/Basebutton.vue';
 import { ref, onMounted } from 'vue'
 
 const products = ref([])
-const newProductName = ref('')
-const newProductPrice = ref(0)
 
 // 1. دالة الـ GET: لجلب المنتجات من السيرفر عند فتح الصفحة
 const fetchProducts = async () => {

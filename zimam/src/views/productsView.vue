@@ -40,7 +40,7 @@ function deleteById(id: string) {
                 </template>
             </Basebutton>
 
-            <Basebutton @click.prevent="deleteById(productId)">
+            <Basebutton @click="deleteById(productId)">
                 <template #svg-img>
                     <img src="@/assets/svg/delete-btn.svg" alt="">
                 </template>

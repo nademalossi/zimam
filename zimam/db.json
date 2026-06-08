@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "name": "علبة بسكويت بالتمر ",
-      "price": "60000",
-      "id": "kF8zcjVUOH8"
-    },
-    {
       "name": "شوكولاتة داكنة بالبندق",
       "price": "8000",
       "id": "7INKeejBZeM"
@@ -16,34 +11,9 @@
       "id": "_tg9zdIWI4Y"
     },
     {
-      "name": "علبة سميري",
+      "name": "شعر بنات",
       "price": "6000",
-      "id": "PnWG_LuoIhE"
-    },
-    {
-      "name": "سيشسي",
-      "price": "4000",
-      "id": "1pXSuIx50QA"
-    },
-    {
-      "name": "سيشسي",
-      "price": "4000",
-      "id": "S17sgZA-85c"
-    },
-    {
-      "name": "شبس باز",
-      "price": "5000",
-      "id": "LbTibtjgvy4"
-    },
-    {
-      "name": "شبس باز",
-      "price": "5000",
-      "id": "OWIpS8hM76A"
-    },
-    {
-      "name": "كرزات",
-      "price": "6000",
-      "id": "C97go4O-dPY"
+      "id": "Fj41iW66j3k"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

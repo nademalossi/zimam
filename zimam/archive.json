@@ -26,6 +26,21 @@
       ],
       "total": 64000,
       "date": "٩‏/٦‏/٢٠٢٦"
+    },
+    {
+      "id": "BkwqcOtSUJk",
+      "archive": true,
+      "customer": "شركة علي أكبر خان",
+      "items": [
+        {
+          "id": "Fj41iW66j3k",
+          "name": "نستلة توتو",
+          "price": 5000,
+          "quantity": 22222
+        }
+      ],
+      "total": 111110000,
+      "date": "١٠‏/٦‏/٢٠٢٦"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,14 +1,19 @@
 {
   "products": [
     {
-      "name": "شعر بنات",
-      "price": "500",
+      "name": "نستلة توتو",
+      "price": 5000,
       "id": "Fj41iW66j3k"
     },
     {
       "name": "علبة بسكويت بالتمر ",
-      "price": "550",
+      "price": 5000,
       "id": "1qRfsVkJ04A"
+    },
+    {
+      "name": "زيت زيتون بكر ممتاز 1 لتر",
+      "price": 3000,
+      "id": "p91Oj4Lknb4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

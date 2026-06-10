@@ -3,23 +3,44 @@ import Pagesheader from '@/components/pagesheader.vue';
 import AddProductForm from '@/components/AddProductForm.vue';
 import { useProductStore } from '@/stores/useProductStore';
 import Basebutton from '@/components/Basebutton.vue';
-import popupModel from '@/components/popupModel.vue';
-import { ref, Teleport } from 'vue';
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 let router = useRouter()
 const useProduct = useProductStore()
 let productName = ref('')
 let productPrice = ref(null)
-let toggleModal = ref(false);
+let errorProductName = ref(false)
+let errorPrice = ref(false)
+function validation() {
+    if (productName.value === "" && productPrice.value === null) {
+        errorPrice.value = true;
+        errorProductName.value = true;
 
-async function post() {
-    if (productName.value === "" || productPrice.value === null) {
-        toggleModal.value = true
-        setTimeout(() => {
-           toggleModal.value = false 
-        }, 3000);
         return
     }
+    if (productName.value === "") {
+        errorProductName.value = true;
+        return
+    }
+    if (productPrice.value === null) {
+        errorPrice.value = true;
+        return
+    }
+    if (productPrice.value <= 0 || typeof (productPrice.value) != "number") {
+
+
+
+        console.log((productPrice.value > 0))
+        console.log(typeof (productPrice.value))
+
+        console.log(productPrice.value + "    الرجاء ادخال قيمة صحيحة")
+        return
+    }
+    post()
+
+}
+async function post() {
+
     await useProduct.addProduct({ "name": productName.value, "price": productPrice.value },)
     router.push('/products')
 }
@@ -41,18 +62,10 @@ async function post() {
 
         </template>
     </Pagesheader>
-    <Teleport to="body">
-    <popupModel :showingModal="toggleModal" @closeModal="toggleModal = false">
-      <template #default>
-            الرجاء اكمال ملئ الحقول
-      </template>
-      <template #footer>
-          <button class="bg-green-500 hover:bg-green-600 rounded-md cursor-pointer p-1 ml-5" @click="toggleModal = false">إلغاء</button>
-    </template>
-    </popupModel>
-</Teleport>
+
     <div class="mt-30  grid place-items-center">
-        <AddProductForm @sendData="post" buttonName="اضافة السلعة" v-model:productName="productName"
+        <AddProductForm v-model:errorProductName="errorProductName" v-model:errorPrice="errorPrice"
+            @sendData="validation" buttonName="اضافة السلعة" v-model:productName="productName"
             v-model:productPrice="productPrice" />
     </div>
 </template>

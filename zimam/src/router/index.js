@@ -33,6 +33,16 @@ const router = createRouter({
       name: "create-new-invoice",
       component: () => import("@/views/CreateNewInvoice.vue"),
     },
+    {
+      path: "/archive",
+      name: "archive",
+      component: () => import("@/views/archiveView.vue"),
+    },
+    {
+      path: "/view-archived-invoice/:id",
+      name: "viewarchivedinvoice",
+      component: () => import("@/views/ArchivedIInvoiceView.vue"),
+    },
   ],
 });
 

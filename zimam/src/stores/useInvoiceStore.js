@@ -39,6 +39,7 @@ export const useInvoiceStore = defineStore("invoiceStore", () => {
     // 3. تجهيز كائن الفاتورة النهائي كما سيعيده لك لارافيل تماماً
     const finalInvoiceData = {
       id: invoiceId,
+      InvoiceNumber: invoiceId,
       archive: false,
       customer: customerName.value,
       items: [...productsList.value],

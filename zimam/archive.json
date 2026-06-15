@@ -41,6 +41,22 @@
       ],
       "total": 111110000,
       "date": "١٠‏/٦‏/٢٠٢٦"
+    },
+    {
+      "id": "5PbUlXCtGuo",
+      "InvoiceNumber": "INV-1001",
+      "archive": true,
+      "customer": "عباس الجنو",
+      "items": [
+        {
+          "id": "NL5amBR0KQ4",
+          "name": "علبة بسكويت بالتمر ",
+          "price": 1000,
+          "quantity": 5
+        }
+      ],
+      "total": 5000,
+      "date": "١٥‏/٦‏/٢٠٢٦"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

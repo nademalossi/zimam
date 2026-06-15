@@ -8,7 +8,7 @@ import Pagesheader from '@/components/pagesheader.vue';
     <div class="h-screen flex flex-col">
         <Pagesheader class="h-16" :home="true">
             <template #default>
-                <Basebutton>
+                <Basebutton link="archive">
                     <template #svg-img>
                         <img src="@/assets/svg/archive.svg" alt="" srcset="">
                     </template>

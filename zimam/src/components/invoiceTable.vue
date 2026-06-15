@@ -18,7 +18,7 @@ defineProps({
             </tr>
         </thead>
         <tbody>
-            <tr v-for="item in data?.items" :key="item.id" class="border-b border-gray-200 print:border-gray-800">
+            <tr v-for="item in data" :key="item.id" class="border-b border-gray-200 print:border-gray-800">
                 <td class="p-3 border-x print:border-gray-800">{{ item.name }}</td>
                 <td class="p-3 border-x print:border-gray-800 font-bold">{{ item.quantity }}</td>
                 <td class="p-3 border-x print:border-gray-800">{{ item.price }} دينار</td>

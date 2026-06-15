@@ -31,7 +31,7 @@ const printDocument = () => {
             </p>
         </div>
 
-        <invoiceTable :data="invoiceStore?.currentInvoice" />
+        <invoiceTable :data="invoiceStore?.currentInvoice?.items" />
 
         <div class="flex justify-end mt-10">
             <div

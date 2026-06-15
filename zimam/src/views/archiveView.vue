@@ -4,6 +4,7 @@ import FilterItems from '@/components/FilterItems.vue';
 import InvoiceCard from '@/components/InvoiceCard.vue';
 import { onMounted } from 'vue';
 import { useArchiveStore } from '@/stores/useArchiveStore';
+import router from '@/router';
 
 let archive = useArchiveStore()
 
@@ -14,7 +15,7 @@ onMounted(async () => {
 })
 
 const showArchivedData = (id) => {
-    console.log(id)
+    router.push("/view-archived-invoice/" + id)
 }
 
 

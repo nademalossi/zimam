@@ -21,5 +21,33 @@
       "id": "R0u-PJmMFV8"
     }
   ],
+  "archive": [
+    {
+      "id": "ySBm5KzgcW4",
+      "archive": true,
+      "customer": "شركة علي أكبر خان",
+      "items": [
+        {
+          "id": "_tg9zdIWI4Y",
+          "name": "علبة سميري",
+          "price": "6000",
+          "quantity": 1
+        },
+        {
+          "id": "Fj41iW66j3k",
+          "name": "شعر بنات",
+          "price": "6000",
+          "quantity": 3
+        },
+        {
+          "id": "7INKeejBZeM",
+          "name": "شوكولاتة داكنة بالبندق",
+          "price": "8000",
+          "quantity": 5
+        }
+      ],
+      "total": 64000,
+      "date": "٩‏/٦‏/٢٠٢٦"
+    }],
   "$schema": "./node_modules/json-server/schema.json"
 }

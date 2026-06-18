@@ -1,13 +1,13 @@
 <script setup>
 import Basebutton from '@/components/Basebutton.vue';
 import InvoiceForm from '@/components/invoiceForm.vue';
-import pagesheader from '@/components/pagesheader.vue';
 import ProductsTabel from '@/components/ProductsTabel.vue';
 import { useRouter } from 'vue-router';
 import { useProductStore } from '@/stores/useProductStore';
 import { useInvoiceStore } from '@/stores/useInvoiceStore';
 import { ref, onMounted } from 'vue'
 import ErrorMessage from '@/components/ErrorMessage.vue';
+import TheHeader from '@/components/ TheHeader.vue';
 
 let productQuantity = ref(null)
 let selectedProduct = ref(null)
@@ -86,7 +86,7 @@ const prepareInvoiceData = async () => {
 </script>
 
 <template>
-    <pagesheader> </pagesheader>
+    <TheHeader />
     <div class="grid place-items-center mt-10 mb-20 px-4">
 
         <div class="flex flex-col w-full max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-100 gap-8">

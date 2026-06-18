@@ -4,7 +4,7 @@ import invoiceHeader from '@/components/invoiceHeader.vue';
 import { useRoute } from 'vue-router';
 import { onMounted } from 'vue';
 import { useArchiveStore } from '@/stores/useArchiveStore';
-import Pagesheader from '@/components/pagesheader.vue';
+import TheHeader from '@/components/ TheHeader.vue';
 
 
 let archive = useArchiveStore()
@@ -23,7 +23,7 @@ const printDocument = () => {
 </script>
 
 <template>
-    <Pagesheader class="print:hidden" />
+    <TheHeader />
     <div
         class="max-w-4xl mx-auto mt-10 bg-white p-10 rounded-lg shadow-xl print:shadow-none print:m-0 print:p-0 print:max-w-full">
         <invoiceHeader :archive="true" @printDocument="printDocument"

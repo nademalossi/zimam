@@ -1,10 +1,11 @@
 <script setup>
-import Pagesheader from '@/components/pagesheader.vue';
+
 import AddProductForm from '@/components/AddProductForm.vue';
 import Basebutton from '@/components/Basebutton.vue';
 import { useProductStore } from '@/stores/useProductStore';
 import { useRoute, useRouter } from 'vue-router';
 import { onMounted, ref } from 'vue';
+import TheHeader from '@/components/ TheHeader.vue';
 
 const route = useRoute()
 const router = useRouter();
@@ -62,19 +63,7 @@ async function update() {
 
 
 <template>
-    <Pagesheader>
-        <template #default>
-            <Basebutton link="/products">
-                <template #svg-img>
-                    <img src="@/assets/svg/products.svg" alt="" srcset="">
-                </template>
-                <template #default>
-                    السلع
-                </template>
-            </Basebutton>
-
-        </template>
-    </Pagesheader>
+    <TheHeader />
     <div class="mt-30  grid place-items-center">
         <AddProductForm @sendData="validation" v-model:errorProductName="errorProductName"
             v-model:errorPrice="errorPrice" v-model:productName="productName" buttonName="تعديل السلعة"

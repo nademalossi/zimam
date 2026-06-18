@@ -7,13 +7,18 @@
     },
     {
       "name": "علبة بسكويت بالتمر ",
-      "price": 5,
+      "price": 5000,
       "id": "R0u-PJmMFV8"
     },
     {
       "name": "ليز بالكتشب",
       "price": 6000,
       "id": "PsQhovoh3Wc"
+    },
+    {
+      "name": "شعر بنات",
+      "price": 6000,
+      "id": "ROoK9eYB6EY"
     }
   ],
   "archive": [
@@ -43,6 +48,28 @@
       ],
       "total": 64000,
       "date": "٩‏/٦‏/٢٠٢٦"
+    },
+    {
+      "id": "pPZ8i32007M",
+      "InvoiceNumber": "INV-1001",
+      "archive": true,
+      "customer": " عباس الملة",
+      "items": [
+        {
+          "id": "PsQhovoh3Wc",
+          "name": "ليز بالكتشب",
+          "price": 6000,
+          "quantity": 5
+        },
+        {
+          "id": "R0u-PJmMFV8",
+          "name": "علبة بسكويت بالتمر ",
+          "price": 5000,
+          "quantity": 6
+        }
+      ],
+      "total": 60000,
+      "date": "١٨‏/٦‏/٢٠٢٦"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

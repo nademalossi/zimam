@@ -1,10 +1,11 @@
 <script setup>
-import Pagesheader from '@/components/pagesheader.vue';
 import AddProductForm from '@/components/AddProductForm.vue';
 import { useProductStore } from '@/stores/useProductStore';
-import Basebutton from '@/components/Basebutton.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import TheHeader from '@/components/ TheHeader.vue';
+
+
 let router = useRouter()
 const useProduct = useProductStore()
 let productName = ref('')
@@ -49,19 +50,7 @@ async function post() {
 
 
 <template>
-    <Pagesheader>
-        <template #default>
-            <Basebutton link="products">
-                <template #svg-img>
-                    <img src="@/assets/svg/products.svg" alt="" srcset="">
-                </template>
-                <template #default>
-                    السلع
-                </template>
-            </Basebutton>
-
-        </template>
-    </Pagesheader>
+    <TheHeader />
 
     <div class="mt-30  grid place-items-center">
         <AddProductForm v-model:errorProductName="errorProductName" v-model:errorPrice="errorPrice"

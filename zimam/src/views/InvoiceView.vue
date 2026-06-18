@@ -5,6 +5,7 @@ import invoiceHeader from '@/components/invoiceHeader.vue';
 import { toRaw } from 'vue';
 import router from '@/router';
 import { useArchiveStore } from '@/stores/useArchiveStore';
+import TheHeader from '@/components/ TheHeader.vue';
 const invoiceStore = useInvoiceStore();
 const archiveStore = useArchiveStore()
 
@@ -25,6 +26,7 @@ const archiveInvoice = () => {
 </script>
 
 <template>
+    <TheHeader class=" print:hidden" />
     <div
         class="max-w-4xl mx-auto mt-10 bg-white p-10 rounded-lg shadow-xl print:shadow-none print:m-0 print:p-0 print:max-w-full">
 

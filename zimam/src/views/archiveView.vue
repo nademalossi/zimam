@@ -1,13 +1,21 @@
 <script setup>
-import Basebutton from '@/components/Basebutton.vue';
-import FilterItems from '@/components/FilterItems.vue';
+
+import SearchBar from '@/components/SearchBar.vue';
 import InvoiceCard from '@/components/InvoiceCard.vue';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useArchiveStore } from '@/stores/useArchiveStore';
 import router from '@/router';
+import TheHeader from '@/components/ TheHeader.vue';
+import HeaderInfo from '@/components/HeaderInfo.vue';
 
-let archive = useArchiveStore()
+const archive = useArchiveStore()
 
+const searchText = ref('');
+
+
+const openFilterModal = () => {
+    console.log("تم النقر على زر التصفية! " + searchText.value);
+};
 onMounted(async () => {
     await archive.fetchArchivedData()
     console.log(archive.archivedData[0])
@@ -21,37 +29,22 @@ const showArchivedData = (id) => {
 
 </script>
 <template>
+    <div class="flex flex-col items-center w-full min-h-screen bg-gray-50 pb-10">
 
-    <div class="flex-1 bg-gray-50/50 p-6 overflow-y-auto">
+        <TheHeader />
 
+        <main class="w-full max-w-5xl px-4 mt-10 flex flex-col gap-8">
 
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-            <div>
-                <h1 class="text-2xl font-black text-gray-950 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-amber-600" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-                    </svg>
-                    أرشيف البيانات القديمة
-                </h1>
-                <p class="text-sm text-gray-500 mt-1">مراجعة وإدارة الفواتير المؤرشفة والمغلقة سابقاً</p>
+            <div class="flex justify-start w-full">
+                <HeaderInfo title="أرشيف البيانات القديمة" subtitle="مراجعة وإدارة الفواتير المؤرشفة والمغلقة سابقاً" />
             </div>
-            <div class=" flex  ">
 
-                <Basebutton v-if="!home" link="/">
-                    <template #svg-img>
-                        <img src="@/assets/svg/home.svg" alt="" srcset="">
-                    </template>
-                    <template #default>
-                        الصفحة الرئيسة
-                    </template>
-                </Basebutton>
-                <slot></slot>
-            </div>
-        </div>
+            <SearchBar v-model:searchQuery="searchText" @filterClick="openFilterModal" />
 
-        <FilterItems />
-        <InvoiceCard :archivedData="archive.archivedData" @goToInvoicePreview="showArchivedData" />
+            <section class="w-full flex flex-col gap-3">
+                <InvoiceCard :archivedData="archive.archivedData" @goToInvoicePreview="showArchivedData" />
+            </section>
+
+        </main>
     </div>
 </template>

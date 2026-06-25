@@ -2,7 +2,7 @@
 
 import SearchBar from '@/components/SearchBar.vue';
 import InvoiceCard from '@/components/InvoiceCard.vue';
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, computed } from 'vue';
 import { useArchiveStore } from '@/stores/useArchiveStore';
 import router from '@/router';
 import TheHeader from '@/components/ TheHeader.vue';
@@ -12,20 +12,32 @@ const archive = useArchiveStore()
 
 const searchText = ref('');
 
-
-const openFilterModal = () => {
-    console.log("تم النقر على زر التصفية! " + searchText.value);
-};
 onMounted(async () => {
     await archive.fetchArchivedData()
-    console.log(archive.archivedData[0])
+
 
 })
 
 const showArchivedData = (id) => {
     router.push("/view-archived-invoice/" + id)
 }
+const filterData = computed(() => {
+    const query = searchText.value.trim().toLowerCase();
 
+    if (!query) {
+        return archive.archivedData;
+    }
+
+    return archive.archivedData.filter((invoice) => {
+        const customerName = invoice.customer || "";
+        const invoiceNum = invoice.InvoiceNumber || "";
+        return (
+            customerName.toLowerCase().includes(query) ||
+            invoiceNum.toLowerCase().includes(query)
+        );
+
+    });
+});
 
 </script>
 <template>
@@ -39,11 +51,17 @@ const showArchivedData = (id) => {
                 <HeaderInfo title="أرشيف البيانات القديمة" subtitle="مراجعة وإدارة الفواتير المؤرشفة والمغلقة سابقاً" />
             </div>
 
-            <SearchBar v-model:searchQuery="searchText" @filterClick="openFilterModal" />
+            <SearchBar v-model:searchQuery="searchText" @filterClick="filterData" />
 
-            <section class="w-full flex flex-col gap-3">
-                <InvoiceCard :archivedData="archive.archivedData" @goToInvoicePreview="showArchivedData" />
+            <section v-if="filterData.length > 0" class="w-full flex flex-col gap-3">
+                <InvoiceCard :archivedData="filterData" @goToInvoicePreview="showArchivedData" />
             </section>
+            <div v-else
+                class="flex flex-col items-center justify-center p-12 bg-white rounded-xl border border-gray-100 border-dashed w-full mt-4">
+                <!-- <img src="@/assets/svg/search.svg" class="w-16 h-16 opacity-20 mb-4 grayscale" alt="لا يوجد"> -->
+                <h3 class="text-lg font-bold text-gray-700">لم نجد أي بيانات مطابقة</h3>
+                <p class="text-sm text-gray-400 mt-1">تأكد من كتابة اسم العميل أو رقم البيان بشكل صحيح.</p>
+            </div>
 
         </main>
     </div>

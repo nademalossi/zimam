@@ -110,6 +110,70 @@
       ],
       "total": 60000,
       "date": "١٨‏/٦‏/٢٠٢٦"
+    },
+    {
+      "id": "ByIiejnezJg",
+      "InvoiceNumber": "INV-1001",
+      "archive": true,
+      "customer": "شركة علي أكبر خان",
+      "items": [
+        {
+          "id": "PsQhovoh3Wc",
+          "name": "ليز بالكتشب",
+          "price": 6000,
+          "quantity": 222
+        }
+      ],
+      "total": 1332000,
+      "date": "٢٥‏/٦‏/٢٠٢٦"
+    },
+    {
+      "id": "yjKlPeQimkw",
+      "InvoiceNumber": "INV-1002",
+      "archive": true,
+      "customer": "اسواق الزهور",
+      "items": [
+        {
+          "id": "ROoK9eYB6EY",
+          "name": "شعر بنات",
+          "price": 6000,
+          "quantity": 222
+        }
+      ],
+      "total": 1332000,
+      "date": "٢٥‏/٦‏/٢٠٢٦"
+    },
+    {
+      "id": "UpXYamF-gVY",
+      "InvoiceNumber": "INV-1003",
+      "archive": true,
+      "customer": "Nadeem",
+      "items": [
+        {
+          "id": "R0u-PJmMFV8",
+          "name": "علبة بسكويت بالتمر ",
+          "price": 5000,
+          "quantity": 333
+        }
+      ],
+      "total": 1665000,
+      "date": "٢٥‏/٦‏/٢٠٢٦"
+    },
+    {
+      "id": "fTyMyllHaTI",
+      "InvoiceNumber": "INV-1004",
+      "archive": true,
+      "customer": "Naddeeeeem",
+      "items": [
+        {
+          "id": "3ZUGZ_JJu4Y",
+          "name": "زيت زيتون بكر ممتاز 1 لتر",
+          "price": 5100,
+          "quantity": 222
+        }
+      ],
+      "total": 1132200,
+      "date": "٢٥‏/٦‏/٢٠٢٦"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

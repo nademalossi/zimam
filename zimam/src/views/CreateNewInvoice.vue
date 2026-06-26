@@ -1,5 +1,5 @@
 <script setup>
-import Basebutton from '@/components/Basebutton.vue';
+
 import InvoiceForm from '@/components/invoiceForm.vue';
 import ProductsTabel from '@/components/ProductsTabel.vue';
 import { useRouter } from 'vue-router';
@@ -9,16 +9,16 @@ import { ref, onMounted } from 'vue'
 import ErrorMessage from '@/components/ErrorMessage.vue';
 import TheHeader from '@/components/ TheHeader.vue';
 
-let productQuantity = ref(null)
-let selectedProduct = ref(null)
 const router = useRouter()
 
-let invoiceStore = useInvoiceStore();
-let products = useProductStore();
-let errorCustomerName = ref(false)
-let errorProductName = ref(false)
-let errorProductQuantitye = ref(false)
-let errorProductsTable = ref(false)
+const selectedProduct = ref(null)
+const productQuantity = ref(null)
+const invoiceStore = useInvoiceStore();
+const products = useProductStore();
+const errorCustomerName = ref(false)
+const errorProductName = ref(false)
+const errorProductQuantitye = ref(false)
+const errorProductsTable = ref(false)
 onMounted(() => {
     products.fetchProducts()
 
@@ -44,7 +44,7 @@ const handleAddProduct = () => {
 
     prepareSelectedProductData()
 };
-function prepareSelectedProductData() {
+const prepareSelectedProductData = () => {
 
     let data = {
         "id": selectedProduct.value.id,
@@ -62,7 +62,7 @@ function prepareSelectedProductData() {
 }
 const prepareInvoiceData = async () => {
     errorCustomerName.value = false
-    errorProductsTable = false
+    errorProductsTable.value = false
     let hasError = false;
 
     if (!customerName.value) {
@@ -70,7 +70,7 @@ const prepareInvoiceData = async () => {
         hasError = true
     }
     if (invoiceStore.productsList.length <= 0) {
-        errorProductsTable = true
+        errorProductsTable.value = true
         hasError = true
     }
     if (hasError) {
@@ -107,19 +107,22 @@ const prepareInvoiceData = async () => {
                         <th class="py-3 px-2">الكمية</th>
                     </template>
                     <template #items="{ productQuantity }">
-                        <td class="py-3 px-2 font-bold text-blue-600">{{ productQuantity }}</td>
+                        <td class="py-3 px-2 font-bold">{{ productQuantity }}</td>
                     </template>
                     <template #setting-btn="{ productId }">
-                        <Basebutton>
-                            <template #svg-img>
-                                <img src="@/assets/svg/edit.svg" alt="حذف">
-                            </template>
-                        </Basebutton>
-                        <Basebutton @click="invoiceStore.removeProduct(productId)">
-                            <template #svg-img>
-                                <img src="@/assets/svg/delete-btn.svg" alt="حذف">
-                            </template>
-                        </Basebutton>
+                        <button
+                            class="p-2 rounded-lg text-gray-500 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            title="تعديل السلعة">
+                            <img src="@/assets/svg/edit.svg" alt="تعديل"
+                                class="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        </button>
+
+                        <button @click="invoiceStore.removeProduct(productId)"
+                            class="p-2 rounded-lg text-gray-500 hover:bg-red-50 hover:text-red-600 transition-colors"
+                            title="حذف السلعة">
+                            <img src="@/assets/svg/delete-btn.svg" alt="حذف"
+                                class="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        </button>
                     </template>
                 </ProductsTabel>
             </div>
@@ -130,7 +133,7 @@ const prepareInvoiceData = async () => {
                     <span class="font-bold text-green-600 text-2xl px-2">{{ invoiceStore.grandTotal }} دينار</span>
                 </div>
                 <button @click.prevent="prepareInvoiceData" :disabled="invoiceStore.isLoading"
-                    class="bg-green-600 disabled:bg-gray-300 hover:bg-green-700 rounded-2xl p-3">
+                    class=" text-white font-bold bg-green-600 disabled:bg-gray-300 hover:bg-green-700 rounded-2xl p-3">
                     {{ invoiceStore.isLoading ? 'جاري الحفظ وتوليد الرقم...' : 'اعتماد وإنشاء الفاتورة' }}
                 </button>
 

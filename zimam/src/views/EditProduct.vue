@@ -11,10 +11,10 @@ const route = useRoute()
 const router = useRouter();
 const productId = route.params.id;
 const useProduct = useProductStore()
-let productName = ref('')
-let productPrice = ref(null)
-let errorProductName = ref(false)
-let errorPrice = ref(false)
+const productName = ref('')
+const productPrice = ref(null)
+const errorProductName = ref(false)
+const errorPrice = ref(false)
 
 onMounted(async () => {
     await useProduct.fetchSingleProduct(productId);
@@ -23,7 +23,7 @@ onMounted(async () => {
 
 })
 
-function validation() {
+const validation = () => {
     if (productName.value === "" && productPrice.value === null) {
         errorPrice.value = true;
         errorProductName.value = true;

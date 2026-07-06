@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "name": "كوكا كولا",
-      "price": 5000,
-      "id": "oMK34LZkYu4"
-    },
-    {
       "name": "عصير رنا",
       "price": 6000,
       "id": "NhKbPg6pLVY"
@@ -14,6 +9,11 @@
       "name": "عصير رنا",
       "price": 3000,
       "id": "25uRVDVtyFw"
+    },
+    {
+      "name": "شبس باباي",
+      "price": 3000,
+      "id": "b0Iz3-7_uq4"
     }
   ],
   "archive": [
@@ -145,6 +145,22 @@
       ],
       "total": 15000,
       "date": "٥‏/٧‏/٢٠٢٦"
+    },
+    {
+      "id": "gLjKACxBSxc",
+      "InvoiceNumber": "INV-1001",
+      "archive": true,
+      "customer": "اسواق الريان",
+      "items": [
+        {
+          "id": "NhKbPg6pLVY",
+          "name": "عصير رنا",
+          "price": 6000,
+          "quantity": 5
+        }
+      ],
+      "total": 30000,
+      "date": "٦‏/٧‏/٢٠٢٦"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

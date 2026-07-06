@@ -22,7 +22,7 @@ const onSubmit = () => {
     const isValid = validateProduct(productName.value, productPrice.value);
 
     if (isValid) {
-        post();
+        update();
     } else {
         console.log("يوجد خطأ في المدخلات، لن يتم الحفظ.");
     }
@@ -33,35 +33,6 @@ onMounted(async () => {
     productPrice.value = useProduct.productPriceById
 
 })
-
-const validation = () => {
-    if (productName.value === "" && productPrice.value === null) {
-        errorPrice.value = true;
-        errorProductName.value = true;
-
-        return
-    }
-    if (productName.value === "") {
-        errorProductName.value = true;
-        return
-    }
-    if (productPrice.value === null || productPrice.value === 0) {
-        errorPrice.value = true;
-        return
-    }
-    if (productPrice.value <= 0 || typeof (productPrice.value) != "number") {
-
-
-
-        console.log((productPrice.value > 0))
-        console.log(typeof (productPrice.value))
-
-        console.log(productPrice.value + "    الرجاء ادخال قيمة صحيحة")
-        return
-    }
-    update()
-
-}
 
 async function update() {
 

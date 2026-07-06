@@ -37,6 +37,11 @@ defineProps({
 
             </tbody>
         </table>
-        <p v-else class="font-bold text-4xl">لا يوجد سلع</p>
+        <div v-else
+            class="flex flex-col items-center justify-center p-12 bg-white rounded-xl border border-gray-100 border-dashed w-full mt-4">
+
+            <h3 class="text-lg font-bold text-gray-700">لا توجد أي سلع </h3>
+            <p class="text-sm text-gray-400 mt-1">الرجاء اضافة سلع الى القائمة</p>
+        </div>
     </div>
 </template>

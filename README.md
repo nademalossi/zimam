@@ -27,10 +27,7 @@ To run the project locally on your machine, please follow these steps:
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone [https://github.com/nademalossi/zimam.git](https://github.com/nademalossi/zimam.git)
-
-   ```
+   git clone [https://github.com/nadeemalaloosi/zimam.git](https://github.com/nadeemalaloosi/zimam.git)
 
 2. **Navigate to the project directory:**
 

@@ -58,9 +58,10 @@ const filterData = computed(() => {
             </section>
             <div v-else
                 class="flex flex-col items-center justify-center p-12 bg-white rounded-xl border border-gray-100 border-dashed w-full mt-4">
-                <!-- <img src="@/assets/svg/search.svg" class="w-16 h-16 opacity-20 mb-4 grayscale" alt="لا يوجد"> -->
-                <h3 class="text-lg font-bold text-gray-700">لم نجد أي بيانات مطابقة</h3>
-                <p class="text-sm text-gray-400 mt-1">تأكد من كتابة اسم العميل أو رقم البيان بشكل صحيح.</p>
+
+                <h3 class="text-lg font-bold text-gray-700">لا توجد أي بيانات </h3>
+                <p v-if="searchText != ''" class="text-sm text-gray-400 mt-1">تأكد من كتابة اسم العميل أو رقم البيان
+                    بشكل صحيح.</p>
             </div>
 
         </main>

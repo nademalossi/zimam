@@ -11,7 +11,7 @@ const props = defineProps({
         type: Boolean,
         default: false
     },
-    errorProductQuantitye: {
+    errorProductQuantity: {
         type: Boolean,
         default: false
     },
@@ -43,7 +43,7 @@ const selectProduct = (product) => {
                 class="p-2 bg-white rounded border border-blue-200 w-4/5 focus:outline-blue-500 transition-colors shadow-sm"
                 placeholder="اكتب اسم العميل هنا...">
         </div>
-        <ErrorMessage message="الرجاء إدخال اسم العميل." :taggle="errorCustomerName" />
+        <ErrorMessage message="الرجاء إدخال اسم العميل." :toggle="errorCustomerName" />
 
         <hr class="border-gray-100">
         <div class="flex items-center relative">
@@ -73,18 +73,8 @@ const selectProduct = (product) => {
 
             </div>
         </div>
-        <!-- 
-        <div class="flex items-center">
-            <label class="w-1/5 font-bold text-gray-700" for="productSelect">اسم المنتج:</label>
-            <select v-model="internalSelectedProduct" id="productSelect"
-                class="w-4/5 p-2 border border-gray-300 rounded focus:outline-blue-500 bg-white shadow-sm">
-                <option value="" disabled selected>-- اختر السلعة --</option>
-                <option v-for="product in products" :key="product.id" :value="product">
-                    {{ product.name }}
-                </option>
-            </select>
-        </div> -->
-        <ErrorMessage message="الرجاء ادخال اسم السلعة" :taggle="errorProductName" />
+
+        <ErrorMessage message="الرجاء ادخال اسم السلعة" :toggle="errorProductName" />
         <div class="flex items-center">
 
             <label class="w-1/5 font-bold text-gray-700" for="productQuantity">الكمية (العدد):</label>
@@ -93,7 +83,7 @@ const selectProduct = (product) => {
                 class="p-2 border border-gray-300 rounded focus:outline-blue-500 w-4/5 shadow-sm"
                 placeholder="أدخل العدد...">
         </div>
-        <ErrorMessage message="الرجاء ادخال كمية السلعة" :taggle="errorProductQuantitye" />
+        <ErrorMessage message="الرجاء ادخال كمية السلعة" :toggle="errorProductQuantity" />
         <div class="flex justify-center mt-2">
             <button @click="emit('sendData')" type="button"
                 class="flex items-center justify-center gap-2 w-full cursor-pointer py-3.5 bg-gray-900 text-white rounded-xl font-medium text-lg hover:bg-gray-800 transition-colors shadow-sm active:scale-[0.98]">

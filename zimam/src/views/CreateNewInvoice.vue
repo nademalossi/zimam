@@ -17,7 +17,7 @@ const invoiceStore = useInvoiceStore();
 const products = useProductStore();
 const errorCustomerName = ref(false)
 const errorProductName = ref(false)
-const errorProductQuantitye = ref(false)
+const errorProductQuantity = ref(false)
 const errorProductsTable = ref(false)
 onMounted(() => {
     products.fetchProducts()
@@ -25,7 +25,7 @@ onMounted(() => {
 })
 const handleAddProduct = () => {
     errorProductName.value = false;
-    errorProductQuantitye.value = false;
+    errorProductQuantity.value = false;
     let hasError = false;
 
     if (!selectedProduct.value) {
@@ -34,7 +34,7 @@ const handleAddProduct = () => {
     }
     const quantity = Number(productQuantity.value);
     if (!productQuantity.value || isNaN(quantity) || quantity <= 0) {
-        errorProductQuantitye.value = true;
+        errorProductQuantity.value = true;
         hasError = true;
     }
 
@@ -94,14 +94,14 @@ const prepareInvoiceData = async () => {
             <div>
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">إنشاء بيان جديد</h2>
                 <InvoiceForm @sendData="handleAddProduct" v-model:errorCustomerName="errorCustomerName"
-                    v-model:errorProductName="errorProductName" v-model:errorProductQuantitye="errorProductQuantitye"
+                    v-model:errorProductName="errorProductName" v-model:errorProductQuantity="errorProductQuantity"
                     v-model:productQuantity="productQuantity" v-model:customerName="invoiceStore.customerName"
                     :products="products.products" v-model:selectedProduct="selectedProduct"
                     buttonName="إضافة إلى المشتريات" />
             </div>
 
             <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 h-80 overflow-scroll max-h-2/4">
-                <ErrorMessage message="الرجاء ادخال سلعة واحدة على الأقل" :taggle="errorProductsTable" />
+                <ErrorMessage message="الرجاء ادخال سلعة واحدة على الأقل" :toggle="errorProductsTable" />
                 <ProductsTable class="w-full bg-white rounded shadow-sm" :products="invoiceStore.productsList">
                     <template #Headers>
                         <th class="py-3 px-2">الكمية</th>

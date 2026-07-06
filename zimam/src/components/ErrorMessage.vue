@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-    taggle: {
+    toggle: {
         type: Boolean,
         default: false
     },
@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <template>
-    <div v-if="taggle"
+    <div v-if="toggle"
         class="flex items-center gap-3 p-2 mb-2 text-red-700 bg-red-50 border border-red-200 rounded-xl shadow-sm"
         role="alert">
 

@@ -85,9 +85,11 @@ const deleteById = (id: string) => {
                 <p class=" font-bold"> {{ productName }}</p>
             </template>
             <template #footer>
-                <button class="bg-red-500 hover:bg-red-600 rounded-md cursor-pointer p-1 ml-5"
+                <button
+                    class=" font-bold text-gray-100  bg-red-700 hover:bg-red-800 rounded-md cursor-pointer px-2  py-1 ml-5"
                     @click="deleteById(trackerproductId);">حذف</button>
-                <button class="bg-green-500 hover:bg-green-600 rounded-md cursor-pointer p-1 ml-5"
+                <button
+                    class="font-bold text-gray-100  bg-green-600 hover:bg-green-700 rounded-md cursor-pointer px-2  py-1 p-2 ml-5"
                     @click="toggleModal = false">إلغاء</button>
             </template>
         </PopupModal>

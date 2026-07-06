@@ -41,7 +41,7 @@ const router = createRouter({
     {
       path: "/view-archived-invoice/:id",
       name: "view-archived-invoice",
-      component: () => import("@/views/ArchivedIInvoiceView.vue"),
+      component: () => import("@/views/ArchivedInvoiceView.vue"),
     },
   ],
 });

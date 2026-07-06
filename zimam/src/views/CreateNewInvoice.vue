@@ -110,13 +110,6 @@ const prepareInvoiceData = async () => {
                         <td class="py-3 px-2 font-bold">{{ productQuantity }}</td>
                     </template>
                     <template #setting-btn="{ productId }">
-                        <button
-                            class="p-2 rounded-lg text-gray-500 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                            title="تعديل السلعة">
-                            <img src="@/assets/svg/edit.svg" alt="تعديل"
-                                class="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity">
-                        </button>
-
                         <button @click="invoiceStore.removeProduct(productId)"
                             class="p-2 rounded-lg text-gray-500 hover:bg-red-50 hover:text-red-600 transition-colors"
                             title="حذف السلعة">

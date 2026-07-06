@@ -1,162 +1,23 @@
 {
   "products": [
     {
-      "name": "عصير رنا",
-      "price": 6000,
-      "id": "NhKbPg6pLVY"
-    },
-    {
-      "name": "عصير رنا",
-      "price": 3000,
-      "id": "25uRVDVtyFw"
-    },
-    {
-      "name": "شبس باباي",
-      "price": 3000,
-      "id": "b0Iz3-7_uq4"
+      "name": "Coca cola",
+      "price": 5000,
+      "id": "Hq_qyzfolxw"
     }
   ],
   "archive": [
     {
-      "id": "ySBm5KzgcW4",
-      "archive": true,
-      "customer": "شركة علي أكبر خان",
-      "items": [
-        {
-          "id": "_tg9zdIWI4Y",
-          "name": "علبة سميري",
-          "price": "6000",
-          "quantity": 1
-        },
-        {
-          "id": "Fj41iW66j3k",
-          "name": "شعر بنات",
-          "price": "6000",
-          "quantity": 3
-        },
-        {
-          "id": "7INKeejBZeM",
-          "name": "شوكولاتة داكنة بالبندق",
-          "price": "8000",
-          "quantity": 5
-        }
-      ],
-      "total": 64000,
-      "date": "٩‏/٦‏/٢٠٢٦"
-    },
-    {
-      "id": "pPZ8i32007M",
+      "id": "ICqrckOL1FE",
       "InvoiceNumber": "INV-1001",
       "archive": true,
-      "customer": " عباس الملة",
+      "customer": "Mohammed",
       "items": [
         {
-          "id": "PsQhovoh3Wc",
-          "name": "ليز بالكتشب",
-          "price": 6000,
-          "quantity": 5
-        },
-        {
-          "id": "R0u-PJmMFV8",
-          "name": "علبة بسكويت بالتمر ",
+          "id": "Hq_qyzfolxw",
+          "name": "Coca cola",
           "price": 5000,
           "quantity": 6
-        }
-      ],
-      "total": 60000,
-      "date": "١٨‏/٦‏/٢٠٢٦"
-    },
-    {
-      "id": "ByIiejnezJg",
-      "InvoiceNumber": "INV-1001",
-      "archive": true,
-      "customer": "شركة علي أكبر خان",
-      "items": [
-        {
-          "id": "PsQhovoh3Wc",
-          "name": "ليز بالكتشب",
-          "price": 6000,
-          "quantity": 222
-        }
-      ],
-      "total": 1332000,
-      "date": "٢٥‏/٦‏/٢٠٢٦"
-    },
-    {
-      "id": "yjKlPeQimkw",
-      "InvoiceNumber": "INV-1002",
-      "archive": true,
-      "customer": "اسواق الزهور",
-      "items": [
-        {
-          "id": "ROoK9eYB6EY",
-          "name": "شعر بنات",
-          "price": 6000,
-          "quantity": 222
-        }
-      ],
-      "total": 1332000,
-      "date": "٢٥‏/٦‏/٢٠٢٦"
-    },
-    {
-      "id": "UpXYamF-gVY",
-      "InvoiceNumber": "INV-1003",
-      "archive": true,
-      "customer": "Nadeem",
-      "items": [
-        {
-          "id": "R0u-PJmMFV8",
-          "name": "علبة بسكويت بالتمر ",
-          "price": 5000,
-          "quantity": 333
-        }
-      ],
-      "total": 1665000,
-      "date": "٢٥‏/٦‏/٢٠٢٦"
-    },
-    {
-      "id": "fTyMyllHaTI",
-      "InvoiceNumber": "INV-1004",
-      "archive": true,
-      "customer": "Naddeeeeem",
-      "items": [
-        {
-          "id": "3ZUGZ_JJu4Y",
-          "name": "زيت زيتون بكر ممتاز 1 لتر",
-          "price": 5100,
-          "quantity": 222
-        }
-      ],
-      "total": 1132200,
-      "date": "٢٥‏/٦‏/٢٠٢٦"
-    },
-    {
-      "id": "Eeu9tInHlwY",
-      "InvoiceNumber": "INV-1002",
-      "archive": true,
-      "customer": "اسواق الشفاء",
-      "items": [
-        {
-          "id": "oMK34LZkYu4",
-          "name": "كوكا كولا",
-          "price": 5000,
-          "quantity": 3
-        }
-      ],
-      "total": 15000,
-      "date": "٥‏/٧‏/٢٠٢٦"
-    },
-    {
-      "id": "gLjKACxBSxc",
-      "InvoiceNumber": "INV-1001",
-      "archive": true,
-      "customer": "اسواق الريان",
-      "items": [
-        {
-          "id": "NhKbPg6pLVY",
-          "name": "عصير رنا",
-          "price": 6000,
-          "quantity": 5
         }
       ],
       "total": 30000,

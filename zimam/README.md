@@ -1,38 +1,53 @@
-# zimam
+# Zimam - Dashboard
 
-This template should help get you started developing with Vue 3 in Vite.
+An advanced dashboard for managing products, generating invoices, and archiving them, designed to provide a seamless user experience and print-ready interfaces.
 
-## Recommended IDE Setup
+## Screenshots
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![Zimam Dashboard](./screenshot/zimam.gif)
 
-## Recommended Browser Setup
+## Key Features
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Product Management (CRUD):** Easily add, edit, and delete products.
+- **Dynamic Invoice Creation:** Automatically calculate the total as items are added to the invoice.
+- **Smart Archive:** Save invoices for future reference, featuring instant search by customer name or invoice number.
+- **Print-Friendly Interfaces:** Convert the invoice screen into an official, print-ready document with a single click.
 
-## Customize configuration
+## Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Framework:** Vue 3 (Composition API) & Vite
+- **Styling:** Tailwind CSS v4
+- **State Management:** Pinia (Domain-Driven Stores)
+- **Routing:** Vue Router (with Lazy Loading)
+- **Mock Backend:** JSON-Server for REST API simulation
 
-## Project Setup
+## Getting Started
 
-```sh
+To run the project locally on your machine, please follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone [https://github.com/nademalossi/zimam.git](https://github.com/nademalossi/zimam.git)
+
+   ```
+
+2. **Navigate to the project directory:**
+
+cd zimam 3. **Install dependencies:**
+
 npm install
-```
 
-### Compile and Hot-Reload for Development
+4. **Run the project:**
 
-```sh
-npm run dev
-```
+A custom script is set up to run both the frontend server (Vite) and the mock database server (JSON-Server) simultaneously:
+npm run dev:all
 
-### Compile and Minify for Production
+5. Open your browser and navigate to the link provided in the terminal (usually http://localhost:5173).
 
-```sh
-npm run build
-```
+## Developer
+
+Nadeem AL-Aloosi
+LinkedIn Profile:
+
+GitHub Profile:

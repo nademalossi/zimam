@@ -15,12 +15,12 @@ const router = createRouter({
     },
     {
       path: "/edit-product/:id",
-      name: "EditProducts",
+      name: "edit-product",
       component: () => import("@/views/EditProduct.vue"),
     },
     {
       path: "/new-product",
-      name: "newproducts",
+      name: "new-product",
       component: () => import("@/views/NewProduct.vue"),
     },
     {
@@ -40,7 +40,7 @@ const router = createRouter({
     },
     {
       path: "/view-archived-invoice/:id",
-      name: "viewarchivedinvoice",
+      name: "view-archived-invoice",
       component: () => import("@/views/ArchivedIInvoiceView.vue"),
     },
   ],

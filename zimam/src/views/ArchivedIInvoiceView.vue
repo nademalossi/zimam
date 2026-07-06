@@ -1,6 +1,6 @@
 <script setup>
-import invoiceTable from '@/components/invoiceTable.vue';
-import invoiceHeader from '@/components/invoiceHeader.vue';
+import InvoiceTable from '@/components/InvoiceTable.vue';
+import InvoiceHeader from '@/components/InvoiceHeader.vue';
 import { useRoute } from 'vue-router';
 import { onMounted } from 'vue';
 import { useArchiveStore } from '@/stores/useArchiveStore';
@@ -26,7 +26,7 @@ const printDocument = () => {
     <TheHeader />
     <div
         class="max-w-4xl mx-auto mt-10 bg-white p-10 rounded-lg shadow-xl print:shadow-none print:m-0 print:p-0 print:max-w-full">
-        <invoiceHeader :archive="true" @printDocument="printDocument"
+        <InvoiceHeader :archive="true" @printDocument="printDocument"
             :invoiceId="archive?.currentInvoice?.InvoiceNumber" />
         <div class="mb-8 p-4 bg-gray-50 rounded-lg print:bg-transparent print:p-0">
             <p class="text-xl font-bold text-gray-700">
@@ -35,7 +35,7 @@ const printDocument = () => {
             </p>
         </div>
 
-        <invoiceTable :data="archive?.currentInvoice?.items" />
+        <InvoiceTable :data="archive?.currentInvoice?.items" />
 
         <div class="flex justify-end mt-10">
             <div

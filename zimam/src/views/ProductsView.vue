@@ -2,7 +2,7 @@
 
 import ProductsTabel from '@/components/ProductsTabel.vue';
 import TheHeader from '@/components/TheHeader.vue';
-import popupModel from '@/components/popupModel.vue';
+import PopupModel from '@/components/PopupModel.vue';
 import { useProductStore } from '@/stores/useProductStore';
 import { ref, onMounted, Teleport } from 'vue';
 import HeaderInfo from '@/components/HeaderInfo.vue';
@@ -77,7 +77,7 @@ const deleteById = (id: string) => {
         </div>
     </div>
     <Teleport to="body">
-        <popupModel :showingModal="toggleModal" @closeModal="toggleModal = false">
+        <PopupModel :showingModal="toggleModal" @closeModal="toggleModal = false">
             <template #header>
                 هل تريد فعلا حذف سلعة:
             </template>
@@ -90,7 +90,7 @@ const deleteById = (id: string) => {
                 <button class="bg-green-500 hover:bg-green-600 rounded-md cursor-pointer p-1 ml-5"
                     @click="toggleModal = false">إلغاء</button>
             </template>
-        </popupModel>
+        </PopupModel>
     </Teleport>
 
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 
-import InvoiceForm from '@/components/invoiceForm.vue';
+import InvoiceForm from '@/components/InvoiceForm.vue';
 import ProductsTabel from '@/components/ProductsTabel.vue';
 import { useRouter } from 'vue-router';
 import { useProductStore } from '@/stores/useProductStore';
